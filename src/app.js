@@ -6,12 +6,13 @@ const mysql = require("mysql2");
 const clientesRoutes = require("./routes/clientes");
 const productosRoutes = require("./routes/productos");
 
+/*
 const mysqlConfig = {
   host: "node_mysql",
   user: "valeria",
   password: "valeria",
   database: "nodedb"
-};
+};*/
 
 let con = null;
 
@@ -34,12 +35,11 @@ app.engine(
 );
 app.set("view engine", "hbs");
 
-
 app.use(myconnection(mysql, {
-    host: "127.0.0.1",
-    user: "root",
-    password: "123456",
-    database: "nodedb"
+  host: "node_mysql",
+  user: "valeria",
+  password: "valeria",
+  database: "nodedb"
 }, 'single' ));
 
 
