@@ -19,15 +19,15 @@ Para permitir la comunicación entre los contenedores de MySQL y Node.js, creamo
 A continuación, iniciamos un contenedor Docker para MySQL con la siguiente configuración:
 
 
-<strong>docker run \
---rm \
--d \
---name node_mysql \
--e MYSQL_DATABASE='nodedb' \
--e MYSQL_USER='valeria' \
--e MYSQL_PASSWORD='valeria' \
--e MYSQL_ROOT_PASSWORD='valeria' \
---network node-network \
+<strong>docker run \\
+--rm \\
+-d \\
+--name node_mysql \\
+-e MYSQL_DATABASE='nodedb' \\
+-e MYSQL_USER='valeria' \\
+-e MYSQL_PASSWORD='valeria' \\
+-e MYSQL_ROOT_PASSWORD='valeria' \\
+--network node-network \\
 mysql:8.0 
 </strong>
 
@@ -38,12 +38,12 @@ mysql:8.0
 Finalmente, iniciamos un contenedor Docker para nuestra aplicación Node.js con el siguiente comando:
 
 
-<strong>docker run \
---rm \
---name node-app \
---network node-network \
--p 5000:9000 \
--v $(pwd):/app \
+<strong>docker run \\
+--rm \\
+--name node-app \\
+--network node-network \\
+-p 5000:9000 \\
+-v $(pwd):/app \\
 node-web 
 </strong>
 
