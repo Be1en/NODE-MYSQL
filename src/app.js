@@ -7,10 +7,10 @@ const clientesRoutes = require("./routes/clientes");
 const productosRoutes = require("./routes/productos");
 
 const mysqlConfig = {
-  host: "127.0.0.1",
-  user: "root",
-  password: "123456",
-  database: "nodedb",
+  host: "node_mysql",
+  user: "valeria",
+  password: "valeria",
+  database: "nodedb"
 };
 
 let con = null;
