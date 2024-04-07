@@ -17,7 +17,7 @@ const mysqlConfig = {
 let con = null;
 
 const app = express();
-app.set("port", 9000);
+app.set("port", 5000);
 
 app.use(
   bodyParser.urlencoded({
