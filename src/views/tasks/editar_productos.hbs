@@ -1,0 +1,33 @@
+
+<div class="m-10 px-12">
+  <h1 class="text-3xl font-semibold text-gray-800">Agregar Producto</h1>
+  {{#each productos}}
+  <form action="" method="POST" class="mt-10 w-full">
+    
+    <label for="nombre_producto" class="block mb-3 block mb-3 text-xs text-gray-700 uppercase">Nombre del Producto</label>
+    <input
+      type="text"
+      id="nombre_producto"
+      class="border border-gray-200 rounded-md bg-white border-indigo-100 border-6 text-lg placeholder-gray-300 p-2 mb-5 focus:outline-none w-3/6"
+      placeholder="Ingrese el nombre del producto"
+      name="producto" value="{{producto}}"
+      required
+    />
+
+    <label for="precio_producto" class="block mb-3 block mb-3 text-xs text-gray-700 uppercase">Precio del Producto</label>
+    <input
+      type="number" step="0.01"
+      id="precio_producto"
+      class="border border-gray-200 rounded-md bg-white border-indigo-100 border-6 text-lg placeholder-gray-300 p-2 mb-5 focus:outline-none w-3/6"
+      placeholder="Ingrese el precio del producto"
+      name="precio" value="{{precio}}"
+      required
+    />
+
+    <button
+      type="submit"
+      class="w-3/6 bg-indigo-200 hover:bg-indigo-300 fon-semibold py-3 px-4 rounded-md"
+    >Editar</button>
+  </form>
+  {{/each}}
+</div>
